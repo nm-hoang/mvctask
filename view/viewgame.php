@@ -1,17 +1,21 @@
-
-<!DOCTYPE html>
-<html>
-<head>
-<title>Title of the document</title>
-</head>
-
-<body>
+<link rel="stylesheet" href="../css/mystyle.css">
 <?php
-
-    echo "Title: " . $game ->title;
-    
-
+    include '../controller/controller.php';
+    include '../view/header.php'; 
+    $games= new Controller();
+    $games = $games->__contruct();
 ?>
-</body>
+<div class="row" style = "padding-top:30px">
+  <?php 
+    $i =0;
+    foreach($games as $game){
+  ?>
+      <div class="col-sm-3">
+    <img src="../img/<?php echo $i?>.jpg" all=" " class="custom-img">
+    <h4><?php echo "Title: ". $game ->title ?></h4>
+    <h4><?php echo "Author: ". $game ->author ?></h4>
+    <h4><?php echo "Description: ". $game ->description ?></h4>
+  </div>
+  <?php $i++; } ?>
 
-</html>
+	

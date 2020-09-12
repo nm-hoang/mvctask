@@ -7,8 +7,8 @@
 </head>
 <body>
     <?php
-      
-        foreach($games as $game): 
+      include '../controller/controller.php';
+        foreach($games as $title => $game): 
             echo 'Title: '. $game->title;
         endforeach;    
     ?>
