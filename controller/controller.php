@@ -11,9 +11,6 @@ class Controller{
     }
    
     public function invoke(){
-        // $games = $this->db->getGameList();
-        // include '../view/gamelist.php';
-        
         if (!isset($_GET['game']))
           {
                $games = $this->model->getGameList();
